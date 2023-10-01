@@ -21,11 +21,10 @@ function Admin({ setUser, user }) {
   return (
     <>
       {/* <Navigation /> */}
-      <div className="bg-[#EB9FF8] py-24 ">
+      <div className="bg-[#EB9FF8] py-24 h-[100vh]">
         <div className="flex justify-between w-11/12 m-auto items-between text-white">
           <h1 className="font-bold text-2xl">
-            Hi <span className="text-[#D05EE2]">{user?.result?.name}</span>,
-            Welcome to Certificate Management system
+            Hi Admin, Welcome to Certificate Varification system
           </h1>
           <button
             onClick={() => dispatch(logout)}
@@ -63,6 +62,14 @@ function Admin({ setUser, user }) {
               <div className="functions">
                 <div className="p-2 bg-red-700  m-4 text-white rounded cursor-pointer">
                   Delete Certificate
+                </div>
+              </div>
+            </Link>
+
+            <Link to="contact-inbox">
+              <div className="functions">
+                <div className="p-2 bg-blue-700  m-4 text-white rounded cursor-pointer">
+                  Contacts
                 </div>
               </div>
             </Link>

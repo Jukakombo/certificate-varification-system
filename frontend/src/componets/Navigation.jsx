@@ -36,7 +36,7 @@ function Navigation() {
     },
   ];
   return (
-    <div className=" primaryBackground">
+    <div className=" primaryBackgroun nvigation_bg_color">
       <div className="  primary__width  py-4 md:flex items-center justify-between">
         <div className="flex  items-center ">
           <Link to="/">

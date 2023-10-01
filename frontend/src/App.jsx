@@ -9,7 +9,7 @@ import { useState } from "react";
 import CreateCertificate from "./componets/CreateCertificate";
 import ViewCertificate from "./componets/ViewCertificate";
 import { getContacts } from "./actions/contacts";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import DeleteCertificate from "./componets/DeleteCertificate";
 import Certificates from "./componets/Certificates";
@@ -18,13 +18,13 @@ import Loader from "./componets/Loader";
 import ContactUs from "./componets/ContactUs";
 import PrivacyPolicy from "./componets/PrivacyPolicy";
 import TermsAndCondition from "./componets/TermsAndCondition";
+import Inbox from "./componets/Inbox";
+import { getNews } from "./actions/news";
 function App() {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  useEffect(() => {
-    dispatch(getContacts());
-  }, [dispatch]);
 
   const ProtectedRoute = ({ children }) => {
     if (!user) {
@@ -33,6 +33,13 @@ function App() {
 
     return children;
   };
+  useEffect(() => {
+    dispatch(getContacts());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getNews());
+  }, [dispatch]);
 
   useEffect(() => {
     setLoading(true);
@@ -81,6 +88,7 @@ function App() {
                 element={<DeleteCertificate />}
               />
               <Route path="certificates" element={<Certificates />} />
+              <Route path="contact-inbox" element={<Inbox />} />
             </Route>
           </Routes>
         </BrowserRouter>

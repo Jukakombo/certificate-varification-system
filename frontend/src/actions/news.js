@@ -35,8 +35,8 @@ export const updateNews = (newsupdatedNews, id) => async (dispatch) => {
 
 export const deleteNews = (id) => async (dispatch) => {
   try {
-    const { data } = await axios.deleteNews(id);
-    dispatch({ type: DELETE_NEWS, payload: data });
+    await axios.deleteContact(id);
+    dispatch({ type: DELETE_NEWS, payload: id });
   } catch (error) {
     console.log(error);
   }

@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import News from '../models/news.js';
+import mongoose from "mongoose";
+import News from "../models/news.js";
 
 export const getNews = async (req, res) => {
   const allNews = await News.find();
@@ -37,9 +37,9 @@ export const updateNews = async (req, res) => {
 };
 
 export const deleteNews = async (req, res) => {
-  const { id: _id } = req.params;
-  if (!mongoose.Types.ObjectId.isValid(_id))
-    return res.status(404).send(`No id new is found with such id:${_id}`);
+  const { id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(404).send(`No contact found with such id:${_id}.`);
   await News.findByIdAndRemove(id);
-  res.send('News was sucessfuly deleted');
+  res.send("contact was sucessfully deleted.");
 };

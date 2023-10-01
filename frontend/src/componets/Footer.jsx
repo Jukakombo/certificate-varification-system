@@ -13,7 +13,7 @@ function Footer() {
   };
   return (
     <>
-      <div className="primaryBackground py-4  ">
+      <div className="primaryBackgroun nvigation_bg_color py-4  ">
         <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-4 primary__width">
           <div className="text-center flex flex-col items-center text-white">
             <img src={logo} className="w-[60px] text-center" alt="Logo" />

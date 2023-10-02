@@ -75,7 +75,7 @@ function ViewCertificate() {
               </p>
 
               <br />
-              <p>
+              <p className="text-[12px]">
                 We extend our warmest congratulations to{" "}
                 <strong>
                   {studentData.firstName} &nbsp;

@@ -1,6 +1,6 @@
 import axios from "axios";
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://certificate-varification-system.onrender.com",
 });
 
 // const url = "http://localhost:5000/contacts";

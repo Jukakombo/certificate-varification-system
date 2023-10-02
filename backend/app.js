@@ -33,7 +33,7 @@ app.use("/ngodatas", ngoRouter);
 // Default route
 app.get("/", (req, res) => {
   res.send(
-    "Hello, welcome to the Juba University Certificate Management System"
+    "Hello, welcome to the Juba University Certificate Varification System"
   );
 });
 

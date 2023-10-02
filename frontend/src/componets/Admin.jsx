@@ -1,6 +1,4 @@
 import React from "react";
-import Navigation from "./Navigation";
-import Footer from "./Footer";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
